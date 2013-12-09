@@ -108,6 +108,7 @@ textarea {
 .home_index .slide {
   height: 100%;
   width: 100%;
+  display: non;
 }
 
 .home_index .box-office {
