@@ -110,7 +110,7 @@ html {
   width: 100%;
 }
 
-.home_index .slide {
+.home_index section {
   height: 100%;
   width: 100%;
   display: none;
@@ -122,13 +122,13 @@ html {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .home_index .box-office {
-  width: 256px;
-  height: 200px;
-  background-size: 256px 200px;
-  margin: 100px auto 50px;
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
   background-image: url('/img/ebell-boxoffice.jpg');
 }
 

@@ -52,7 +52,7 @@ collage:
 ---
 
 <div class="loader">&nbsp;</div>
-<div class="slide" id="slide-1">
+<section>
   <div class="collage clearfix">
   {% for image in page.collage %}
     <div style="background-image: url(/img/collage/{{image.src}}.jpg); width: {{ image.width }}px; height: {{ image.height }}px">
@@ -61,4 +61,4 @@ collage:
   </div>
   <h1 class="title center">September 20th, 2014</h1>
   <h2 class="title center">The Ebell, Los Angeles</h1>
-</div>
+</section>

@@ -1,8 +1,8 @@
-$('.slide').waitForImages({
+$('section').waitForImages({
   finished: function() {
     console.log("Loaded Images");
     $('.loader').fadeOut();
-    $('.slide').fadeIn();
+    $('section').fadeIn();
   },
   waitForAll: true
 });
