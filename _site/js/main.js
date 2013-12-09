@@ -1,3 +1,3 @@
-$(window).load(function() {
+$('body').waitForImages(function() {
   $('.slide').fadeIn();
 });
