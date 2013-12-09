@@ -101,21 +101,41 @@ textarea {
   background : #000;
   color: #fff;
   font-family: 'Federo', sans-serif;
+  padding: 0 0 100px 0;
   /*font-family: 'Linden Hill', serif;*/
 }
 
+.home_index .slide {
+  height: 100%;
+  width: 100%;
+}
+
 .home_index .box-office {
-  width: 512px;
-  height: 401px;
-  margin: 100px auto;
+  width: 256px;
+  height: 200px;
+  background-size: 256px 200px;
+  margin: 100px auto 50px;
   background-image: url('/img/ebell-boxoffice.jpg');
 }
 
+.home_index .collage {
+  width: 800px;
+  margin: 20px auto;
+}
+
+.home_index .collage div {
+  height: 150px;
+  background-size: cover;
+  float: left;
+}
+
 h1 {
+  margin: 0;
   font-size: 2em;
 }
 
 h2 {
+  margin: 0;
   font-size: 1.6em;
 }
 

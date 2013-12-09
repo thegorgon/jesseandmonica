@@ -3,8 +3,61 @@ layout: master
 title: Jesse and Monica are Getting Married!
 description: On October 9th, 2013, Jesse Reiss asked Monica Lienke to marry him. She said yes. Welcome to our wedding website.
 body_class: home_index
+collage:
+  - src: 2006-dublin
+    width: 300
+    height: 150
+  - src: 2006-paris-louvre
+    width: 200
+    height: 150
+  - src: 2006-paris-seine
+    width: 150
+    height: 150
+  - src: 2007-on-a-beach
+    width: 150
+    height: 150
+  - src: 2007-smiling
+    width: 150
+    height: 150
+  - src: 2008-halloween
+    width: 250
+    height: 150
+  - src: 2009-quebec
+    width: 250
+    height: 150
+  - src: 2010-mammoth-devils-postpile
+    width: 150
+    height: 150
+  - src: 2010-thailand-boat
+    width: 200
+    height: 150
+  - src: 2011-long-island-beach
+    width: 250
+    height: 150
+  - src: 2012-jacks-wedding
+    width: 200
+    height: 150
+  - src: 2012-law-formal
+    width: 150
+    height: 150
+  - src: 2013-london-hampstead
+    width: 250
+    height: 150
+  - src: 2013-paris-notre-dame
+    width: 300
+    height: 150
+  - src: 2013-paris-bridge
+    width: 250
+    height: 150
 ---
 
-<div class="box-office"></div>
-<h1 class="center">September 20th, 2014</h1>
-<h2 class="center">The Ebell, Los Angeles</h1>
+<div class="slide" id="slide-1">
+  <div class="collage clearfix">
+  {% for image in page.collage %}
+    <div style="background-image: url(/img/collage/{{image.src}}.jpg); width: {{ image.width }}px; height: {{ image.height }}px">
+    </div>
+  {% endfor %}
+  </div>
+  <h1 class="title center">September 20th, 2014</h1>
+  <h2 class="title center">The Ebell, Los Angeles</h1>
+</div>
