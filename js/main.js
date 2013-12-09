@@ -1,4 +1,7 @@
-$('.slide').waitForImages(function() {
-  console.log("Loaded Images");
-  $('.slide').fadeIn();
+$('.slide').waitForImages({
+  finished: function() {
+    console.log("Loaded Images");
+    $('.slide').fadeIn();
+  },
+  waitForAll: true
 });
