@@ -97,18 +97,31 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 .home_index {
   background : #000;
   color: #fff;
   font-family: 'Federo', sans-serif;
-  padding: 0 0 100px 0;
-  /*font-family: 'Linden Hill', serif;*/
+  height: 100%;
+  width: 100%;
 }
 
 .home_index .slide {
   height: 100%;
   width: 100%;
   display: none;
+}
+
+.loader {
+  background-image: url('/img/ajax-loader.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .home_index .box-office {
