@@ -312,6 +312,106 @@ a, a:hover, a:visited {
 a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 900px) {
+  article, section {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .scotch-tape {
+    width: 80px;
+    height: 30px;
+  }
+
+  .home .spouse.image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home .names {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    text-align: center;
+  }
+
+  header a, header a:hover, header a:visited {
+    padding: 0 5px;
+  }
+
+  article, section {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .home .spouse.image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .scotch-tape {
+    width: 100px;
+    height: 38px;
+  }
+
+  .home .spouse.jesse.image {
+    margin: 20px auto 80px;
+    float: none;
+  }
+
+  .home .monica.spouse.image {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .home .names {
+    height: 20px;
+    line-height: 1.2em;
+    padding: 20px 0 0;
+  }
+
+  .home .ampersand {
+    font-size: inherit;
+    padding: 0;
+    top: 0;
+  }
+
+  h1 {
+    font-size: 20px
+  }
+
+  h2 {
+    font-size: 18px
+  }
+
+  h3 {
+    font-size: 16px
+  }
+
+  h4 {
+    font-size: 14px
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    font-size: 12px;
+  }
+
+  .home .spouse.image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .scotch-tape {
+    width: 80px;
+    height: 30px;
+  }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
