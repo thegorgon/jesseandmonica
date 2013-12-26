@@ -145,6 +145,7 @@ html {
   height: 150px;
   background-size: cover;
   float: left;
+  background-position: center;
 }
 
 h1 {
