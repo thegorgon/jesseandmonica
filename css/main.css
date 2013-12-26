@@ -118,7 +118,7 @@ header {
 header a, header a:hover, header a:visited {
   color: #333;
   text-shadow: 0 1px #ddd;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 footer {
