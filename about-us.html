@@ -4,11 +4,23 @@ title: About Us - Jesse and Monica are Getting Married!
 body_class: about
 ---
 
+{% assign images = site.data.collage %}
+{% assign story = site.data.story %}
+{% assign rows = images | size | divided_by: 4 | minus: 1 %}
+
 <article class="clearfix">
   <ul class="collage">
-  {% for image in site.data.collage %}
-    <li style="background-image: url(/img/collage/{{image.src}}.jpg); width: {{ image.width }}px;">
-    </li>
-  {% endfor %}
+    {% for row in (0..rows) %}
+      <div class="row clearfix">
+      {% for column in (0..3) %}
+        {% assign index = row | times: 4 | plus: column %}
+        {% assign img = images[index] %}
+        <li style="background-image: url(/img/collage/{{img.src}}.jpg); width: {{ img.width }}px;"></li>
+      {% endfor %}
+      </div>
+      <h4 class="story center">
+        {{ story[row] }}
+      </h4>
+    {% endfor %}
   </ul>
 </article>

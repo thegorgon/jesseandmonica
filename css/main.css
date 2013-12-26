@@ -248,6 +248,11 @@ article {
   background-image: url('/img/ebell-boxoffice.jpg');
 }
 
+ul.collage .story {
+  height: 100px;
+  padding: 25px 0;
+}
+
 ul.collage li {
   height: 150px;
   background-size: cover;
