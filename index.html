@@ -46,7 +46,39 @@ collage:
     width: 200
 ---
 
+<header>
+  <a href="#about-us">About Us</a>
+  <a href="#directions">Directions</a>
+  <a href="#lodging">Lodging</a>
+  <a href="#directions">Registry</a>
+</header>
+
 <div class="loader">&nbsp;</div>
+<section>
+  <div class="intro clearfix">
+    <div class="jesse spouse image">
+    </div>
+    <div class="ampersand">&amp;</div>
+    <div class="monica spouse image">
+    </div>
+    <h1 class="jesse spouse name">
+      Jesse Reiss
+    </h1>
+    <h1 class="monica spouse name">
+      Monica Lienke
+    </h1>
+    <div class="details clear">
+      <h2 class="title center">September 20th, 2014</h1>
+      <h2 class="title center">The Ebell, Los Angeles</h1>
+    </div>
+    <ul class="links">
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="#directions">Directions</a></li>
+      <li><a href="#lodging">Lodging</a></li>
+      <li><a href="#directions">Registry</a></li>
+    </ul>
+  </div>
+</section>
 <section>
   <div class="collage clearfix">
   {% for image in page.collage %}
@@ -54,6 +86,4 @@ collage:
     </div>
   {% endfor %}
   </div>
-  <h1 class="title center">September 20th, 2014</h1>
-  <h2 class="title center">The Ebell, Los Angeles</h1>
 </section>

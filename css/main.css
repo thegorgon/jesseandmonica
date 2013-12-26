@@ -104,20 +104,100 @@ html {
   margin: 0;
 }
 
+header {
+  background: #7FBE41;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*box-shadow: 0 1px 1px 1px #999;*/
+  line-height: 40px;
+}
+
+header a, header a:hover, header a:visited {
+  color: #333;
+  text-shadow: 0 1px #ddd;
+  padding: 0 10px;
+}
+
 .home_index {
-  background : #000;
-  color: #fff;
+  background : #dfdfdf url('/img/dfdfdf-bg.png') repeat;
+  color: #333;
   font-family: 'Federo', sans-serif;
   height: 100%;
   width: 100%;
-  padding: 0;
+  padding: 40px 0 0 0;
   margin: 0;
 }
 
 .home_index section {
+  min-height: 760px;
   height: 100%;
   width: 100%;
   display: none;
+}
+
+.home_index .intro {
+  width: 800px;
+  margin: 100px auto;
+}
+
+.home_index .intro .spouse {
+  width: 300px;
+}
+
+.home_index .intro .details {
+  padding: 40px 0 0;
+}
+
+.home_index .intro .spouse.name {
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+
+.home_index .intro .spouse.image {
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  border-bottom: 1px solid #999;
+}
+
+.home_index .intro .ampersand {
+  float: left;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  font-size: 80px;
+  line-height: 300px;
+}
+
+.home_index .intro .jesse {
+  clear: left;
+  float: left;
+}
+
+.home_index .intro .jesse.image {
+  background-image: url('/img/jesse-reiss.jpg');
+}
+
+.home_index .intro .monica {
+  clear: right;
+  float: right;
+}
+
+.home_index .intro .monica.image {
+  background-image: url('/img/monica-lienke.jpg');
+}
+
+.home_index .intro .links {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.home_index .intro .links li {
+  display: inline;
+  padding: 0 5px;
 }
 
 .loader {
@@ -151,10 +231,12 @@ html {
 h1 {
   margin: 0;
   font-size: 2em;
+  text-shadow: 0 1px #fff;
 }
 
 h2 {
   margin: 0;
+  text-shadow: 0 1px #fff;
   font-size: 1.6em;
 }
 
@@ -163,6 +245,25 @@ h2 {
   text-align: center;
 }
 
+.clear {
+  clear: both;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:visited {
+  color: #333;
+  text-decoration: none;
+  text-shadow: 0 1px #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
