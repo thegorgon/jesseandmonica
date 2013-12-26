@@ -145,7 +145,7 @@ section {
 article {
   width: 800px;
   margin: 0 auto;
-  padding: 120px 0 0;
+  padding: 80px 0 0;
 }
 
 .home .spouse {
@@ -207,6 +207,7 @@ article {
 }
 
 .home .spouse.image {
+  margin: 60px 0 0 0;
   background-position: center;
   background-size: cover;
   height: 300px;
@@ -258,6 +259,10 @@ ul.collage li {
   background-size: cover;
   float: left;
   background-position: center;
+}
+
+h1.title {
+  padding: 0 0 40px 0;
 }
 
 h1, h2, h3, h4 {

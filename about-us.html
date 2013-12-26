@@ -9,6 +9,7 @@ body_class: about
 {% assign rows = images | size | divided_by: 4 | minus: 1 %}
 
 <article class="clearfix">
+  <h1 class="title">About Us</h1>
   <ul class="collage">
     {% for row in (0..rows) %}
       <div class="row clearfix">
