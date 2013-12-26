@@ -113,6 +113,7 @@ header {
   left: 0;
   right: 0;
   line-height: 40px;
+  z-index: 100;
   text-shadow: none;
 }
 
@@ -149,48 +150,94 @@ article {
 
 .home .spouse {
   width: 300px;
+  position: relative;
+  overflow: visible;
+}
+
+.scotch-tape {
+  background: url('/img/scotch-tape.png');
+  background-size: cover;
+  width: 100px;
+  height: 38px;
+  position: absolute;
+  opacity: 0.75;
+}
+
+.jesse .scotch-tape.left {
+  top: -15px;
+  left: -45px;
+  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+}
+
+.jesse .scotch-tape.right {
+  bottom: -15px;
+  right: -45px;
+  transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+}
+
+.monica .scotch-tape.left {
+  top: -15px;
+  left: -45px;
+  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+}
+
+.monica .scotch-tape.right {
+  top: -15px;
+  right: -45px;
+  transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
 }
 
 .home .details {
-  padding: 60px 0 0;
+  padding: 20px 0 0;
 }
 
 .home .spouse.name {
   text-align: center;
-  padding: 20px 0 20px 0;
+  height: 80px;
+  line-height: 80px;
+  padding: 40px 0 0;
 }
 
 .home .spouse.image {
   background-position: center;
   background-size: cover;
   height: 300px;
-  border-bottom: 1px solid #999;
+}
+
+.home .names {
+  clear: both;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+  overflow: visible;
+  padding: 60px 0 0 62px;
 }
 
 .home .ampersand {
-  float: left;
-  width: 200px;
-  height: 300px;
-  text-align: center;
-  font-size: 80px;
-  line-height: 300px;
-}
-
-.home .jesse {
-  clear: left;
-  float: left;
+  font-weight: normal;
+  padding: 0 15px;
+  position: relative;
+  top: 10px;
+  font-size: 60px;
 }
 
 .home .jesse.image {
+  clear: left;
+  float: left;
   background-image: url('/img/jesse-reiss.jpg');
 }
 
-.home .monica {
+.home .monica.image {
   clear: right;
   float: right;
-}
-
-.home .monica.image {
   background-image: url('/img/monica-lienke.jpg');
 }
 
