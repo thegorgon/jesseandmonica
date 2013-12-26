@@ -113,25 +113,12 @@ header {
   left: 0;
   right: 0;
   line-height: 40px;
+  text-shadow: none;
 }
 
 header a, header a:hover, header a:visited {
   color: #333;
-  text-shadow: 0 1px #ddd;
   padding: 0 20px;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin: 10px 0;
-}
-
-footer a {
-  padding: 0 5px;
 }
 
 body {
@@ -151,6 +138,7 @@ section {
   height: 100%;
   width: 100%;
   display: none;
+  text-shadow: 0 1px #fff;
 }
 
 article {
@@ -222,7 +210,6 @@ ul.collage li {
 
 h1, h2, h3, h4 {
   margin: 0;
-  text-shadow: 0 1px #fff;
 }
 
 h1 {
@@ -263,7 +250,6 @@ ul {
 a, a:hover, a:visited {
   color: #333;
   text-decoration: none;
-  text-shadow: 0 1px #fff;
 }
 
 a:hover {
