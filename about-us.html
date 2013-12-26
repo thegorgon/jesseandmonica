@@ -1,0 +1,14 @@
+---
+layout: site
+title: About Us - Jesse and Monica are Getting Married!
+body_class: about
+---
+
+<article class="clearfix">
+  <ul class="collage">
+  {% for image in site.data.collage %}
+    <li style="background-image: url(/img/collage/{{image.src}}.jpg); width: {{ image.width }}px;">
+    </li>
+  {% endfor %}
+  </ul>
+</article>

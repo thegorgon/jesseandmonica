@@ -111,7 +111,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  /*box-shadow: 0 1px 1px 1px #999;*/
+  right: 0;
   line-height: 40px;
 }
 
@@ -121,49 +121,65 @@ header a, header a:hover, header a:visited {
   padding: 0 10px;
 }
 
-.home_index {
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 10px 0;
+}
+
+footer a {
+  padding: 0 5px;
+}
+
+body {
   background : #dfdfdf url('/img/dfdfdf-bg.png') repeat;
   color: #333;
   font-family: 'Federo', sans-serif;
   height: 100%;
   width: 100%;
-  padding: 40px 0 0 0;
+  padding: 0;
   margin: 0;
 }
 
-.home_index section {
-  min-height: 760px;
+section {
+  padding: 0;
+  margin: 0;
+  position: relative;
   height: 100%;
   width: 100%;
   display: none;
 }
 
-.home_index .intro {
+article {
   width: 800px;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 120px 0 0;
 }
 
-.home_index .intro .spouse {
+.home .spouse {
   width: 300px;
 }
 
-.home_index .intro .details {
+.home .details {
   padding: 40px 0 0;
 }
 
-.home_index .intro .spouse.name {
+.home .spouse.name {
   text-align: center;
   padding: 20px 0 20px 0;
 }
 
-.home_index .intro .spouse.image {
+.home .spouse.image {
   background-position: center;
   background-size: cover;
   height: 300px;
   border-bottom: 1px solid #999;
 }
 
-.home_index .intro .ampersand {
+.home .ampersand {
   float: left;
   width: 200px;
   height: 300px;
@@ -172,63 +188,61 @@ header a, header a:hover, header a:visited {
   line-height: 300px;
 }
 
-.home_index .intro .jesse {
+.home .jesse {
   clear: left;
   float: left;
 }
 
-.home_index .intro .jesse.image {
+.home .jesse.image {
   background-image: url('/img/jesse-reiss.jpg');
 }
 
-.home_index .intro .monica {
+.home .monica {
   clear: right;
   float: right;
 }
 
-.home_index .intro .monica.image {
+.home .monica.image {
   background-image: url('/img/monica-lienke.jpg');
 }
 
-.home_index .intro .links {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.home_index .intro .links li {
-  display: inline;
-  padding: 0 5px;
-}
-
-.home_index .box-office {
+.home .box-office {
   width: 400px;
   height: 400px;
   margin: 20px auto;
   background-image: url('/img/ebell-boxoffice.jpg');
 }
 
-.home_index .collage {
-  width: 800px;
-  margin: 20px auto;
-}
-
-.home_index .collage div {
+ul.collage li {
   height: 150px;
   background-size: cover;
   float: left;
   background-position: center;
 }
 
-h1 {
+h1, h2, h3, h4 {
   margin: 0;
-  font-size: 2em;
   text-shadow: 0 1px #fff;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 h2 {
-  margin: 0;
-  text-shadow: 0 1px #fff;
+  font-size: 1.8em;
+}
+
+h3 {
   font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.2em;
 }
 
 .center {

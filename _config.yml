@@ -1,6 +1,7 @@
 safe: true
 lsi: false
 pygments: true
+permalink: pretty
 exclude:
   - CNAME
   - Gemfile
