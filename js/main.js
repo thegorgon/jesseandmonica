@@ -1,7 +1,7 @@
-$('section').waitForImages({
+$('body').waitForImages({
   finished: function() {
     console.log("Loaded Images");
-    $('section').fadeIn();
+    $('body').fadeIn();
   },
   waitForAll: true
 });

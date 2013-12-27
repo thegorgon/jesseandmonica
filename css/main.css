@@ -102,6 +102,7 @@ html {
   width: 100%;
   padding: 0;
   margin: 0;
+  background: #dfdfdf
 }
 
 header {
@@ -137,7 +138,7 @@ header a.home:hover {
 }
 
 body {
-  background : #dfdfdf url('/img/dfdfdf-bg.png') repeat;
+  background: #dfdfdf url('/img/dfdfdf-bg.png') repeat;
   color: #333;
   font-size: 18px;
   font-family: 'Josefin Sans', 'Helvetica', 'Arial', sans-serif;
@@ -145,6 +146,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  display: none;
 }
 
 section {
@@ -153,7 +155,6 @@ section {
   position: relative;
   height: 100%;
   width: 100%;
-  display: none;
   text-shadow: 0 1px #fff;
 }
 
