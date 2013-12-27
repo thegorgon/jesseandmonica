@@ -124,24 +124,6 @@ body {
   background: #dfdfdf url('/img/dfdfdf-bg.png') repeat;
 }
 
-@keyframes strobe {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes strobe {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .loader-container {
   position: absolute;
   top: 0;
@@ -149,8 +131,6 @@ body {
   right: 0;
   width: 100%;
   padding-top: 200px;
-  animation: strobe 0.75s ease-in 0 infinite alternate running;
-  -webkit-animation: strobe 0.75s ease-in 0 infinite alternate running;
 }
 
 .loader {
