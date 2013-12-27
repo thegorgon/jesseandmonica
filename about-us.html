@@ -4,24 +4,26 @@ title: About Us - Jesse and Monica are Getting Married!
 body_class: about
 ---
 
-{% assign images = site.data.collage %}
-{% assign story = site.data.story %}
-{% assign rows = images | size | divided_by: 4 | minus: 1 %}
-
 <article class="clearfix">
   <h1 class="title">About Us</h1>
-  <ul class="collage">
-    {% for row in (0..rows) %}
-      <div class="row clearfix">
-      {% for column in (0..3) %}
-        {% assign index = row | times: 4 | plus: column %}
-        {% assign img = images[index] %}
-        <li style="background-image: url(/img/collage/{{img.src}}.jpg); width: {{ img.width }}px;"></li>
-      {% endfor %}
-      </div>
-      <p class="story center">
-        {{ story[row] }}
-      </p>
-    {% endfor %}
-  </ul>
+  <img class="image-row" src="/img/collage-1.png" />
+  <p class="story">
+    Both Jesse and Monica decided to study abroad in Bordeaux during the spring semester of their third year at UC Berkeley. They had several mutual friends, but didn't yet know each other well.
+  </p>
+  <img class="image-row" src="/img/collage-2.png" />
+  <p class="story">
+    By coincidence, they ended up on the same flight to Bordeaux. During the flight, Jesse came to Monica's seat to see how she was doing. Monica says she remembers thinking how nice that was.
+  </p>
+  <img class="image-row" src="/img/collage-3.png" />
+  <p class="story">
+    The coincidences continued - housed with French families, Monica and Jesse ended up on the same street: Rue Naujac. Their first day in France, Monica and Jesse met up to explore the town and buy phones.
+  </p>
+  <img class="image-row" src="/img/collage-4.png" />
+  <p class="story">
+    Monica and Jesse became best friends, spending time together almost every day. While Jesse insisted they were merely friends, his host mother, Joanna, began to hint to him about their relationship.
+  </p>
+  <img class="image-row" src="/img/collage-5.png" />
+  <p class="story">
+    One fateful night, Monica and Jesse decided to watch L'Auberge Espagnole. That was 8 years ago. Now, they're getting married!
+  </p>
 </article>
