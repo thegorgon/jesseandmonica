@@ -1,5 +1,10 @@
 (function() {
-  $('#loader').show();
+  $('#loader').waitForImages({
+    finished: function() {
+      $('#loader').show();
+    },
+    waitForAll: true
+  });
   var reveal = function() {
     $('#loader').fadeOut(250);
     $('#container').fadeIn(250);
