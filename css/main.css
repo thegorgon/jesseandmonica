@@ -236,6 +236,14 @@ a:hover {
   opacity: 0.75;
 }
 
+.coming-soon {
+  background: url('/img/coming-soon.png');
+  background-size: 200px 200px;
+  width: 200px;
+  height: 200px;
+  margin: 60px auto 0;
+}
+
 .jesse .scotch-tape.left {
   top: -15px;
   left: -45px;
