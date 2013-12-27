@@ -444,11 +444,13 @@ a:hover {
 
 @media (max-width: 600px) {
   header {
+    font-size: 12px;
+    padding: 0;
     text-align: center;
   }
 
   header a, header a:hover, header a:visited {
-    padding: 0 5px;
+    padding: 0 3px;
   }
 
   article, section {
@@ -517,15 +519,6 @@ a:hover {
 }
 
 @media (max-width: 400px) {
-  header {
-    font-size: 12px;
-    padding: 0;
-  }
-
-  header a {
-    padding: 0 3px;
-  }
-
   header a.home img {
     height: 15px;
     width: 15px;
