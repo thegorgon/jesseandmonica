@@ -124,10 +124,10 @@ header a, header a:hover, header a:visited {
 }
 
 header a.home img {
-  top: -2px;
-  height: 20px;
-  width: 20px;
-  padding: 0 2px;
+  top: -3px;
+  height: 15px;
+  width: 15px;
+  padding: 0 3px 0 4px;
   position: relative;
   opacity: 0.73;
 }
