@@ -1,7 +1,11 @@
-$('body').waitForImages({
-  finished: function() {
-    console.log("Loaded Images");
-    $('body').fadeIn();
-  },
-  waitForAll: true
-});
+(function() {
+  var reveal = function() {
+    $('#loader').fadeOut();
+    $('#container').fadeIn();
+  };
+  $('body').waitForImages({
+    finished: reveal,
+    waitForAll: true
+  });
+}());
+
