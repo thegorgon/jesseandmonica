@@ -149,8 +149,8 @@ body {
   right: 0;
   width: 100%;
   padding-top: 200px;
-  animation: strobe 0.75s linear 0 infinite alternate running;
-  -webkit-animation: strobe 0.75s linear 0 infinite alternate running;
+  animation: strobe 0.75s ease-in 0 infinite alternate running;
+  -webkit-animation: strobe 0.75s ease-in 0 infinite alternate running;
 }
 
 .loader {
