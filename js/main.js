@@ -1,4 +1,5 @@
 (function() {
+  $('#loader').show();
   var reveal = function() {
     $('#loader').fadeOut(250);
     $('#container').fadeIn(250);
