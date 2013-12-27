@@ -519,6 +519,11 @@ a:hover {
 @media (max-width: 400px) {
   header {
     font-size: 12px;
+    padding: 0;
+  }
+
+  header a {
+    padding: 0 3px;
   }
 
   header a.home img {
