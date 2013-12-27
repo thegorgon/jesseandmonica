@@ -1,9 +1,7 @@
 (function() {
   var reveal = function() {
     $('#loader').fadeOut(250);
-    setTimeout(function() {
-      $('#container').fadeIn();
-    }, 100);
+    $('#container').fadeIn(250);
   };
   $('body').waitForImages({
     finished: reveal,
