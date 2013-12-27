@@ -1,7 +1,7 @@
 (function() {
   $('#loader').waitForImages({
     finished: function() {
-      $('#loader').show();
+      $('#loader').fadeIn(10);
     },
     waitForAll: true
   });
