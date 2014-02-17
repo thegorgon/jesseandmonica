@@ -353,6 +353,7 @@ a:hover {
 
 .registry .gift-registries li, .registry .charities li {
   margin: 10px 0;
+  list-style: disc inside;
 }
 
 @media (max-width: 900px) {
