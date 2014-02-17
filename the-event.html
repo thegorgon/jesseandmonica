@@ -10,18 +10,8 @@ body_class: event
   <h3 class='center'>Ceremony&nbsp;at&nbsp;5:00pm, Reception&nbsp;Immediately&nbsp;Following</h3>
   <div id='map' class='map'></div>
   <p class='center'>
-    <a href='{{ site.data.links.google_calendar }}' title='Add to your calendar' class='addthisevent'>
-      <span class='_start'>20-09-2014 17:00:00</span>
-      <span class='_end'>21-09-2014 00:00:00</span>
-      <span class='_zonecode'>6</span>
-      <span class='_summary'>Jesse and Monica's Wedding</span>
-      <span class='_description'>The Wedding of Jesse Reiss and Monica Lienke</span>
-      <span class='_location'>The Ebell of Los Angeles, 743 S. Lucerne Boulevard, Los Angeles, California</span>
-      <span class='_organizer'>Jesse &amp; Monica</span>
-      <span class='_organizer_email'>jesseandmonicagettingmarried@gmail.com</span>
-      <span class='_all_day_event'>false</span>
-      <span class='_date_format'>DD/MM/YYYY</span>
-      Add to your calendar</a>.
+    The Ebell is located at 
+    &nbsp;<a class='directions' target='_blank' href='{{ site.data.all.ebell_map }}'>743 S. Lucerne Boulevard, Los Angeles, California</a>
   </p>
   <p>
     <strong>The Ceremony</strong> will commence at 5:00pm at the Ebell. In an attempt to represent the 3 cultures Monica and Jesse were raised with, the ceremony will be a fusion of aspects of American, Jewish, and Persian wedding traditions.
@@ -30,12 +20,11 @@ body_class: event
     <strong>The Reception</strong> will be hosted at the Ebell immediately following the ceremony. Dinner and drinks will be served with live music and vivacious dancing.
   </p>
   <p>
-    <strong>The Ebell of Los Angeles</strong> is located at <a class='directions' target='_blank' href='{{ site.data.links.ebell_directions }}'>743 S. Lucerne Boulevard, Los Angeles, California</a>. The Ebell was constructed in 1927 to house the Ebell Women's Club and the renowned Wilshire Ebell Theatre. The building was declared a Cultural Historic Monument in 1982. Notable performances at the Ebell include Judy Garland's first audition and Amelia Aerhart's final public appearance before her around-the-world flight.
+    <strong>The Ebell of Los Angeles</strong> was constructed in 1927 to house the Ebell Women's Club and the renowned Wilshire Ebell Theatre. The building was declared a Cultural Historic Monument in 1982. Notable performances at the Ebell include Judy Garland's first audition and Amelia Aerhart's final public appearance before her around-the-world flight.
   </p>
 </article>
 
-<script type='text/javascript' src='http://js.addthisevent.com/atemay.js'></script>
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAC6FHvLoNAkx2JngPb2xXDEbVtm_Tu7ds&sensor=false'></script>
+<script type='text/javascript' src='{{ site.data.all.maps_api }}'></script>
 <script type='text/javascript'>
   window.Map.init({
     address: '743 S Lucerne Blvd, Los Angeles, CA 90005',

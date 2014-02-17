@@ -115,6 +115,10 @@ body {
   margin: 0;
 }
 
+p {
+  margin: 1em 0;
+}
+
 .cursive {
   font-family: 'Bad Script', cursive, sans-serif;
 }
@@ -144,8 +148,10 @@ header {
 
 header a, header a:hover, header a:visited {
   color: #fff;
+  background: transparent;;
   padding: 0 20px;
   text-decoration: none;
+  border: none;
 }
 
 header a.home img {
@@ -226,13 +232,13 @@ p.center {
 a.directions {
   padding-right: 20px;
   background-image: url('/img/directions.png');
-  background-position: right top;
+  background-position: right 2px;
   background-repeat: no-repeat;
   background-size: 15px 15px
 }
 
 a.directions:hover {
-  background-image: url('/img/directions-hover.png');
+  background-image: url('/img/directions-hover-white.png');
 }
 
 ul {
@@ -243,11 +249,16 @@ ul {
 
 a, a:hover, a:visited {
   color: #333;
-  text-decoration: underline;
+  padding-bottom: 1px;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  text-shadow: none;
 }
 
 .coming-soon {
@@ -297,25 +308,6 @@ a:hover {
   margin: 30px 0 10px;
 }
 
-.event .addthisevent-drop {
-  display: inline;
-  padding: 0 20px 0 0;
-  font-size: 18px;
-  text-align: center;
-  font-family: inherit;
-  background: transparent url('/img/calendar.png') no-repeat top right;
-  background-size: 15px 15px;
-  border: none;
-  font-weight: normal;
-}
-
-.event .addthisevent-drop:hover {
-  border: none;
-  font-weight: normal;
-  font-size: 18px;
-  text-decoration: underline !important;
-}
-
 .lodging .map {
   margin: 30px 0 20px;
   width: 800px;
@@ -343,19 +335,24 @@ a:hover {
   margin: 30px 0 0 0;
 }
 
-.registry .options li {
-  width: 200px;
+.registry li.option {
+  width: 211px;
   padding: 15px 20px;
-  margin-right: 22px;
+  margin-right: 20px;
   float: left;
   border: 1px solid #aaa;
   box-shadow: 0px 1px 4px #999;
   border-radius: 7px;
   background: #efefef;
+  cursor: pointer;
 }
 
-.registry .options li:last-child {
+.registry li.option:last-child {
   margin: 0;
+}
+
+.registry .gift-registries li {
+  margin: 10px 0;
 }
 
 @media (max-width: 900px) {
@@ -395,6 +392,20 @@ a:hover {
 
   .event .map, .lodging .map {
     width: 500px;    
+  }
+
+  .registry .options {
+    width: 500px;
+  }
+
+  .registry li.option {
+    float: none;
+    width: 500px;
+    margin: 0 auto 10px;
+  }
+
+  .registry li.option p {
+    margin: 0.5em 0 1em;    
   }
 
   h1 {
@@ -437,24 +448,26 @@ a:hover {
     height: 38px;
   }
 
-  h1 {
-    font-size: 20px
-  }
-
-  h2 {
-    font-size: 18px
-  }
-
-  h3 {
-    font-size: 16px
-  }
-
-  h4 {
-    font-size: 14px
-  }
-
   .event .map, .lodging .map {
     width: 300px;    
+  }
+
+  .event h1 {
+    font-size: 22px;
+  }
+
+  .event h3 {
+    font-size: 20px;
+  }
+
+  .registry .options {
+    width: 300px;
+  }
+
+  .registry li.option {
+    float: none;
+    width: 250px;
+    margin: 0 auto 10px;
   }
 }
 /* ==========================================================================

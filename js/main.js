@@ -116,3 +116,10 @@
   }
 }());
 
+$.ready(function() {
+  $('ul.options li').click(function(e) {
+    console.log(e);
+    e.preventDefault();
+    return false;
+  });
+});
