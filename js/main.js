@@ -30,7 +30,7 @@
       controlUI.style.borderColor = '#ccc';
       controlUI.style.cursor = 'pointer';
       controlUI.style.textAlign = 'center';
-      controlUI.style.boxShadow = '1px #333 0.5'
+      controlUI.style.boxShadow = '0px 1px 4px #999';
       controlUI.title = 'Click for Directions';
       controlDiv.appendChild(controlUI);
 

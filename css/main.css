@@ -207,6 +207,10 @@ h5 {
   text-align: center;
 }
 
+p.center {
+  margin: 10px auto;
+}
+
 .left {
   float: left;
 }
@@ -330,6 +334,30 @@ a:hover {
   margin: 0 30px 30px 0;
 }
  
+.registry .options {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.registry .options {
+  margin: 30px 0 0 0;
+}
+
+.registry .options li {
+  width: 200px;
+  padding: 15px 20px;
+  margin-right: 22px;
+  float: left;
+  border: 1px solid #aaa;
+  box-shadow: 0px 1px 4px #999;
+  border-radius: 7px;
+  background: #efefef;
+}
+
+.registry .options li:last-child {
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   article, section {
     width: 500px;
@@ -365,7 +393,7 @@ a:hover {
     font-size: 20px;
   }
 
-  .event .map {
+  .event .map, .lodging .map {
     width: 500px;    
   }
 
@@ -425,7 +453,7 @@ a:hover {
     font-size: 14px
   }
 
-  .event .map {
+  .event .map, .lodging .map {
     width: 300px;    
   }
 }
