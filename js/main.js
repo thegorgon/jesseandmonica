@@ -116,10 +116,19 @@
   }
 }());
 
-$.ready(function() {
-  $('ul.options li').click(function(e) {
-    console.log(e);
-    e.preventDefault();
-    return false;
+$(document).ready(function() {
+  $('ul.options li').on('click', function(e) {
+    var target = $(e.toElement);
+    var link = $(this).find('a:first'); 
+
+    if (target.is('a')) {
+      return true;
+    } else if (link.length > 0) {
+      e.preventDefault();
+      window.open(link.attr('href'), '_blank');
+      return false;
+    } else {
+      return false;
+    }
   });
 });
