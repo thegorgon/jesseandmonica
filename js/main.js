@@ -36,6 +36,7 @@
 
       // Set CSS for the control interior.
       var controlText = document.createElement('div');
+      controlText.style.fontFamily = "'Alegreya Sans', 'Arial', sans-serif";
       controlText.style.fontSize = '12px';
       controlText.style.paddingLeft = '4px';
       controlText.style.paddingRight = '4px';
@@ -91,7 +92,8 @@
         infoWindow = new google.maps.InfoWindow({
           content: "<div style='float:left;background-image:url(\"" + 
             options.img +
-            "\");background-size:100% 100%;width:30px;height:30px;margin-right:5px;'></div><div style='float:left;line-height:28px;'>" + 
+            "\");background-size:100% 100%;width:30px;height:30px;margin-right:5px;'></div>" + 
+            "<div style='float:left;line-height:29px;font-size:16px;font-family:Alegreya Sans, Arial, sans-serif;'>" + 
             options.title + "</div>"  
         });
         marker = new google.maps.Marker({
