@@ -108,7 +108,7 @@ body {
   background: url('/img/dfdfdf-bg.png') repeat;
   color: #333;
   font-size: 18px;
-  font-family: 'Josefin Sans','Helvetica', 'Arial', sans-serif;
+  font-family: 'Josefin Sans', 'Helvetica', 'Arial', sans-serif;
   height: 100%;
   width: 100%;
   padding: 0;
@@ -145,6 +145,7 @@ header {
 header a, header a:hover, header a:visited {
   color: #fff;
   padding: 0 20px;
+  text-decoration: none;
 }
 
 header a.home img {
@@ -238,7 +239,7 @@ ul {
 
 a, a:hover, a:visited {
   color: #333;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -286,14 +287,6 @@ a:hover {
   padding: 0 0 20px 0;
 }
 
-.event .box-office {
-  width: 200px;
-  height: 200px;
-  margin: 20px 20px 20px 0;
-  background-image: url('/img/ebell-boxoffice.jpg');
-  background-size: 100% 100%;
-}
-
 .event .map {
   width: 800px;
   height: 200px;
@@ -319,6 +312,24 @@ a:hover {
   text-decoration: underline !important;
 }
 
+.lodging .map {
+  margin: 30px 0 20px;
+  width: 800px;
+  height: 200px;
+}
+
+.lodging .address {
+  margin: 0 0 20px 0;
+}
+
+.lodging .loews {
+  background: url('/img/loews.jpg') no-repeat top right;
+  background-size: 100% 100%;
+  width: 300px;
+  height: 197px;
+  margin: 0 30px 30px 0;
+}
+ 
 @media (max-width: 900px) {
   article, section {
     width: 500px;

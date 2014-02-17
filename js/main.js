@@ -7,57 +7,60 @@
     waitForAll: true
   });
 
-  function getDirections() {
-    window.open('https://www.google.com/maps/dir/Current+Location/743+S+Lucerne+Blvd,+Los+Angeles,+CA+90005', '_blank');
-  };
+  window.Map = {};
 
-  function DirectionsControl(map) {
-    var controlDiv = document.createElement('div')
-    // Set CSS styles for the DIV containing the control
-    // Setting padding to 5 px will offset the control
-    // from the edge of the map.
-    controlDiv.style.padding = '5px';
+  window.Map.init = function(options) {
+    var addressUri = options.address.replace(/\s/g, '+');
+    function getDirections() {
+      window.open('https://www.google.com/maps/dir/Current+Location/' + addressUri, '_blank');
+    };
 
-    // Set CSS for the control border.
-    var controlUI = document.createElement('div');
-    controlUI.style.backgroundColor = 'white';
-    controlUI.style.borderStyle = 'solid';
-    controlUI.style.borderWidth = '1px';
-    controlUI.style.borderColor = '#ccc';
-    controlUI.style.cursor = 'pointer';
-    controlUI.style.textAlign = 'center';
-    controlUI.style.boxShadow = '1px #333 0.5'
-    controlUI.title = 'Click for Directions';
-    controlDiv.appendChild(controlUI);
+    function DirectionsControl(map) {
+      var controlDiv = document.createElement('div')
+      // Set CSS styles for the DIV containing the control
+      // Setting padding to 5 px will offset the control
+      // from the edge of the map.
+      controlDiv.style.padding = '5px';
 
-    // Set CSS for the control interior.
-    var controlText = document.createElement('div');
-    controlText.style.fontSize = '12px';
-    controlText.style.paddingLeft = '4px';
-    controlText.style.paddingRight = '4px';
-    controlText.style.paddingTop = '2px';
-    controlText.style.paddingBottom = '2px';
-    controlText.innerHTML = 'Directions';
-    controlUI.appendChild(controlText);
+      // Set CSS for the control border.
+      var controlUI = document.createElement('div');
+      controlUI.style.backgroundColor = 'white';
+      controlUI.style.borderStyle = 'solid';
+      controlUI.style.borderWidth = '1px';
+      controlUI.style.borderColor = '#ccc';
+      controlUI.style.cursor = 'pointer';
+      controlUI.style.textAlign = 'center';
+      controlUI.style.boxShadow = '1px #333 0.5'
+      controlUI.title = 'Click for Directions';
+      controlDiv.appendChild(controlUI);
 
-    // Setup the click event listeners: simply set the map to Chicago.
-    google.maps.event.addDomListener(controlUI, 'click', getDirections);
+      // Set CSS for the control interior.
+      var controlText = document.createElement('div');
+      controlText.style.fontSize = '12px';
+      controlText.style.paddingLeft = '4px';
+      controlText.style.paddingRight = '4px';
+      controlText.style.paddingTop = '2px';
+      controlText.style.paddingBottom = '2px';
+      controlText.innerHTML = 'Directions';
+      controlUI.appendChild(controlText);
 
-    this.div = controlDiv;
-    this.div.index = 1;
-  };
+      // Setup the click event listeners: simply set the map to Chicago.
+      google.maps.event.addDomListener(controlUI, 'click', getDirections);
 
-  window.EventMap = {};
+      this.div = controlDiv;
+      this.div.index = 1;
+    };
 
-  window.EventMap.init = function() {
     google.maps.event.addDomListener(window, 'load', function() {
       var 
-        ebell = new google.maps.LatLng(34.0610506,-118.3245231),
+        center = new google.maps.LatLng(options.ll[0], options.ll[1]),
         canvas = document.getElementById('map'),
         mapOptions = {
-          center: ebell,
+          center: center,
           draggable: false,
           zoom: 14,
+          maxZoom: 14,
+          minZoom: 14,
           disableDefaultUI: true,
           styles: [
             {
@@ -86,10 +89,13 @@
         map = new google.maps.Map(canvas, mapOptions),
         dirControl = new DirectionsControl(map),
         infoWindow = new google.maps.InfoWindow({
-          content: "<div style='float:left;background-image:url(\"/img/ebell-boxoffice.jpg\");background-size:100% 100%;width:30px;height:30px;margin-right:5px;'></div><div style='float:left;line-height:28px;'>The Ebell of Los Angeles</div>"  
+          content: "<div style='float:left;background-image:url(\"" + 
+            options.img +
+            "\");background-size:100% 100%;width:30px;height:30px;margin-right:5px;'></div><div style='float:left;line-height:28px;'>" + 
+            options.title + "</div>"  
         });
         marker = new google.maps.Marker({
-          position: ebell,
+          position: center,
           map: map,
           icon: {
             path: google.maps.SymbolPath.CIRCLE,
@@ -97,11 +103,11 @@
             strokeColor: '#333',
             scale: 2
           },
-          title: 'The Ebell of Los Angeles'
+          title: options.title
         });
 
       google.maps.event.addDomListener(map, 'click', getDirections);
-      setInterval(function() { map.setCenter(ebell); }, 100);
+      setInterval(function() { map.setCenter(center); }, 100);
       map.controls[google.maps.ControlPosition.TOP_RIGHT].push(dirControl.div);
       infoWindow.open(map, marker);
     });

@@ -6,8 +6,8 @@ body_class: event
 
 <article class='clearfix'>
   <h1 class='center'>Saturday, September 20th, 2014</h1>
-  <h3 class='center'>The Ebell of Los Angeles</h2>
-  <h3 class='center'>Ceremony&nbsp;at&nbsp;5:00pm, Reception&nbsp;Immediately&nbsp;Following</h2>
+  <h3 class='center'>The Ebell of Los Angeles</h3>
+  <h3 class='center'>Ceremony&nbsp;at&nbsp;5:00pm, Reception&nbsp;Immediately&nbsp;Following</h3>
   <div id='map' class='map'></div>
   <p class='center'>
     <a href='{{ site.data.links.google_calendar }}' title='Add to your calendar' class='addthisevent'>
@@ -37,5 +37,10 @@ body_class: event
 <script type='text/javascript' src='http://js.addthisevent.com/atemay.js'></script>
 <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAC6FHvLoNAkx2JngPb2xXDEbVtm_Tu7ds&sensor=false'></script>
 <script type='text/javascript'>
-  window.EventMap.init()
+  window.Map.init({
+    address: '743 S Lucerne Blvd, Los Angeles, CA 90005',
+    ll: [34.0610506,-118.3245231],
+    img: '/img/ebell-boxoffice.jpg',
+    title: 'The Ebell of Los Angeles'
+  });
 </script>
