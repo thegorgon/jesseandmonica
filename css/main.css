@@ -351,7 +351,7 @@ a:hover {
   margin: 0;
 }
 
-.registry .gift-registries li {
+.registry .gift-registries li, .registry .charities li {
   margin: 10px 0;
 }
 
