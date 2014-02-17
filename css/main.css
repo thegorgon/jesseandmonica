@@ -105,14 +105,18 @@ html {
 }
 
 body {
-  background: #dfdfdf;
+  background: url('/img/dfdfdf-bg.png') repeat;
   color: #333;
   font-size: 18px;
-  font-family: 'Josefin Sans', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Josefin Sans','Helvetica', 'Arial', sans-serif;
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.cursive {
+  font-family: 'Bad Script', cursive, sans-serif;
 }
 
 .container {
@@ -121,11 +125,10 @@ body {
   margin: 0;
   padding: 0;
   display: none;
-  background: #dfdfdf url('/img/dfdfdf-bg.png') repeat;
 }
 
 header {
-  background: #7FBE41;
+  background: #828C96;
   height: 40px;
   width: 100%;
   padding: 0 10px;
@@ -136,20 +139,18 @@ header {
   line-height: 40px;
   z-index: 100;
   text-shadow: none;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 header a, header a:hover, header a:visited {
-  color: #333;
+  color: #fff;
   padding: 0 20px;
 }
 
 header a.home img {
-  top: -3px;
-  height: 15px;
-  width: 15px;
-  padding: 0 3px 0 4px;
   position: relative;
-  opacity: 0.73;
+  top: -2px;
+  height: 15px;
 }
 
 header a.home:hover {
@@ -168,11 +169,12 @@ section {
 article {
   width: 800px;
   margin: 0 auto;
+  position: relative;
   padding: 80px 0 40px;
 }
 
 h1, h2, h3, h4, h5, header, strong {
-  font-family: 'Federo', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
@@ -243,21 +245,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.home .spouse {
-  width: 300px;
-  position: relative;
-  overflow: visible;
-}
-
-.scotch-tape {
-  background: url('/img/scotch-tape.png');
-  background-size: cover;
-  width: 100px;
-  height: 38px;
-  position: absolute;
-  opacity: 0.75;
-}
-
 .coming-soon {
   background: url('/img/coming-soon.png');
   background-size: 200px 200px;
@@ -266,83 +253,24 @@ a:hover {
   margin: 60px auto 0;
 }
 
-.jesse .scotch-tape.left {
-  top: -15px;
-  left: -45px;
-  transform: rotate(-40deg);
-  -webkit-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-}
-
-.jesse .scotch-tape.right {
-  bottom: -15px;
-  right: -45px;
-  transform: rotate(-35deg);
-  -webkit-transform: rotate(-35deg);
-  -ms-transform: rotate(-35deg);
-}
-
-.monica .scotch-tape.left {
-  top: -15px;
-  left: -45px;
-  transform: rotate(-40deg);
-  -webkit-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-}
-
-.monica .scotch-tape.right {
-  top: -15px;
-  right: -45px;
-  transform: rotate(35deg);
-  -webkit-transform: rotate(35deg);
-  -ms-transform: rotate(35deg);
-}
-
 .home .details {
   padding: 20px 0;
 }
 
-.home .spouse.name {
-  text-align: center;
-  height: 80px;
-  line-height: 80px;
-  padding: 40px 0 0;
-}
-
-.home .spouse.image {
-  margin: 60px 0 0 0;
-  background-position: center;
-  background-size: cover;
-  height: 300px;
+.home .couples {
+  float: left;
+  height: 577px;
+  width: 400px;
+  background-size: 100% 100%;
+  background-image: url('/img/couple-800x1155.png');
 }
 
 .home .names {
-  clear: both;
   text-align: center;
-  height: 80px;
-  line-height: 80px;
   overflow: visible;
-  padding: 60px 0 0 62px;
-}
-
-.home .ampersand {
-  font-weight: normal;
-  padding: 0 15px;
-  position: relative;
-  top: 10px;
-  font-size: 60px;
-}
-
-.home .jesse.image {
-  clear: left;
-  float: left;
-  background-image: url('/img/jesse-reiss.jpg');
-}
-
-.home .monica.image {
-  clear: right;
-  float: right;
-  background-image: url('/img/monica-lienke.jpg');
+  z-index: 1;
+  font-size: 43px;
+  padding: 165px 0 0;
 }
 
 .about .story {
@@ -359,10 +287,17 @@ a:hover {
 }
 
 .event .box-office {
-  width: 400px;
-  height: 400px;
-  margin: 0 30px 20px 0;
+  width: 200px;
+  height: 200px;
+  margin: 20px 20px 20px 0;
   background-image: url('/img/ebell-boxoffice.jpg');
+  background-size: 100% 100%;
+}
+
+.event .map {
+  width: 800px;
+  height: 200px;
+  margin: 30px 0 10px;
 }
 
 .event .addthisevent-drop {
@@ -399,24 +334,28 @@ a:hover {
     padding: 10px 0;
   }
 
-  .scotch-tape {
-    width: 80px;
-    height: 30px;
-  }
-
-  .home .spouse.image {
-    width: 200px;
-    height: 200px;
+  .home .couples {
+    float: none;
+    width: 300px;
+    height: 433px;
+    margin: 0 auto;
   }
 
   .home .names {
-    padding-top: 40px;
+    font-size: 30px;
+    padding-top: 20px;
   }
 
-  .event .box-office {
-    width: 200px;
-    height: 200px;
-    background-size: 200px 200px;
+  .home h2 {
+    font-size: 26px;
+  }
+
+  .home h4 {
+    font-size: 20px;
+  }
+
+  .event .map {
+    width: 500px;    
   }
 
   h1 {
@@ -433,6 +372,10 @@ a:hover {
 
   header a, header a:hover, header a:visited {
     padding: 0 3px;
+  }
+
+  header a.home img {
+    height: 11px;
   }
 
   article, section {
@@ -455,28 +398,6 @@ a:hover {
     height: 38px;
   }
 
-  .home .spouse.jesse.image {
-    margin: 20px auto 80px;
-    float: none;
-  }
-
-  .home .monica.spouse.image {
-    margin: 0 auto;
-    float: none;
-  }
-
-  .home .names {
-    height: 20px;
-    line-height: 1.2em;
-    padding: 20px 0 0;
-  }
-
-  .home .ampersand {
-    font-size: inherit;
-    padding: 0;
-    top: 0;
-  }
-
   h1 {
     font-size: 20px
   }
@@ -493,27 +414,8 @@ a:hover {
     font-size: 14px
   }
 
-  .event .box-office {
-    width: 300px;
-    height: 300px;
-    background-size: 300px 300px;
-  }
-}
-
-@media (max-width: 400px) {
-  header a.home img {
-    height: 15px;
-    width: 15px;
-  }
-
-  .home .spouse.image {
-    width: 200px;
-    height: 200px;
-  }
-
-  .scotch-tape {
-    width: 80px;
-    height: 30px;
+  .event .map {
+    width: 300px;    
   }
 }
 /* ==========================================================================
