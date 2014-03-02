@@ -228,6 +228,21 @@ p.center {
   clear: both;
 }
 
+@keyframes blink {
+  0% { opacity: 1.0; }
+  70% { opacity: 0; }
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  70% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+  -webkit-animation: blink 1s step-end infinite;
+}
+
 a.directions {
   padding-right: 20px;
   background-image: url('/img/directions.png');
@@ -240,10 +255,14 @@ a.directions:hover {
   background-image: url('/img/directions-hover-white.png');
 }
 
-ul {
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+ul.bulleted {
+  list-style: disc inside none;
 }
 
 a, a:hover, a:visited {
@@ -324,7 +343,7 @@ a:hover {
   height: 197px;
   margin: 0 30px 30px 0;
 }
- 
+
 .registry .options {
   width: 800px;
   margin: 0 auto;
@@ -391,7 +410,7 @@ a:hover {
   }
 
   .event .map, .lodging .map {
-    width: 500px;    
+    width: 500px;
   }
 
   .registry .options {
@@ -405,7 +424,7 @@ a:hover {
   }
 
   .registry li.option p {
-    margin: 0.5em 0 1em;    
+    margin: 0.5em 0 1em;
   }
 
   h1 {
@@ -449,7 +468,7 @@ a:hover {
   }
 
   .event .map, .lodging .map {
-    width: 300px;    
+    width: 300px;
   }
 
   .event h1 {

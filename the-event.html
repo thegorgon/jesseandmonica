@@ -10,7 +10,7 @@ body_class: event
   <h3 class='center'>Ceremony&nbsp;at&nbsp;5:00pm, Reception&nbsp;Immediately&nbsp;Following</h3>
   <div id='map' class='map'></div>
   <p class='center'>
-    The Ebell is located at 
+    The Ebell is located at
     &nbsp;<a class='directions' target='_blank' href='{{ site.data.all.ebell_map }}'>743 S. Lucerne Boulevard, Los Angeles, California</a>
   </p>
   <p>
@@ -27,6 +27,7 @@ body_class: event
 <script type='text/javascript' src='{{ site.data.all.maps_api }}'></script>
 <script type='text/javascript'>
   window.Map.init({
+    id: 'map',
     address: '743 S Lucerne Blvd, Los Angeles, CA 90005',
     ll: [34.0610506,-118.3245231],
     img: '/img/ebell-boxoffice.jpg',

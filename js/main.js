@@ -45,9 +45,9 @@
     };
 
     google.maps.event.addDomListener(window, 'load', function() {
-      var 
+      var
         center = new google.maps.LatLng(options.ll[0], options.ll[1]),
-        canvas = document.getElementById('map'),
+        canvas = document.getElementById(options.id),
         mapOptions = {
           center: center,
           draggable: false,
@@ -64,14 +64,14 @@
               ]
             },
             {
-              featureType: 'all', 
+              featureType: 'all',
               elementType: 'labels',
               stylers: [
                 { visibility: 'off' }
               ]
             },
             {
-              featureType: 'road', 
+              featureType: 'road',
               elementType: 'labels',
               stylers: [
                 { visibility: 'on' }
@@ -82,11 +82,11 @@
         map = new google.maps.Map(canvas, mapOptions),
         dirControl = new DirectionsControl(map),
         infoWindow = new google.maps.InfoWindow({
-          content: "<div style='float:left;background-image:url(\"" + 
+          content: "<div style='float:left;background-image:url(\"" +
             options.img +
-            "\");background-size:100% 100%;width:30px;height:30px;margin-right:5px;'></div>" + 
-            "<div style='float:left;line-height:29px;font-size:16px;font-family:Alegreya Sans, Arial, sans-serif;'>" + 
-            options.title + "</div>"  
+            "\");background-size:100% 100%;width:30px;height:30px;margin-right:5px;'></div>" +
+            "<div style='float:left;line-height:29px;font-size:16px;font-family:Alegreya Sans, Arial, sans-serif;'>" +
+            options.title + "</div>"
         });
         marker = new google.maps.Marker({
           position: center,
@@ -111,7 +111,7 @@
 $(document).ready(function() {
   $('ul.options li').on('click', function(e) {
     var target = $(e.toElement);
-    var link = $(this).find('a:first'); 
+    var link = $(this).find('a:first');
 
     if (target.is('a')) {
       return true;
